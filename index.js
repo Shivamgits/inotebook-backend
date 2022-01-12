@@ -9,6 +9,7 @@ const port = 5000
 
 // for using request.body we need a middleware function
 app.use(express.json())
+app.use(cors({ origin: '*' }));
 
 //Available Routes
 app.use('/api/auth',require('./routes/auth'))
